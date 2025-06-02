@@ -4,57 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categories</title>
+    <title>
+        <%= category %> Menu
+    </title>
 </head>
-<nav>
-    <a href="/">Home</a>
-    <a href="/menu">Full Menu</a>
-</nav>
 
 <body>
     <%- include('./partials/nav') %>
-        <h1>Categories</h1>
-        <ul>
-            <% menu.forEach(menu=> { %>
-                <% if (menu.category==='mains' ) { %>
+        <h1>
+            <%= category %>
+        </h1>
+
+        <% if (menuItems.length> 0) { %>
+            <ul>
+                <% menuItems.forEach(menu => { %>
                     <li>
                         <%= menu.name %>,
                             $<%= menu.price %>,
                                 <%= menu.rating %> ★'s,
                                     <%= menu.details %>
                     </li>
-
-                    <% } %>
-                        <% }) %>
-        </ul>
-        <h2>Sides</h2>
-        <ul>
-            <% menu.forEach(menu=> { %>
-                <% if (menu.category==='sides' ) { %>
-                    <li>
-                        <%= menu.name %>,
-                            $<%= menu.price %>,
-                                <%= menu.rating %> ★'s,
-                                    <%= menu.details %>
-                    </li>
-
-                    <% } %>
-                        <% }) %>
-        </ul>
-        <h2>Desserts</h2>
-        <ul>
-            <% menu.forEach(menu=> { %>
-                <% if (menu.category==='desserts' ) { %>
-                    <li>
-                        <%= menu.name %>,
-                            $<%= menu.price %>,
-                                <%= menu.rating %> ★'s,
-                                    <%= menu.details %>
-                    </li>
-
-                    <% } %>
-                        <% }) %>
-        </ul>
+                    <% }) %>
+            </ul>
+            <% } else { %>
+                <p>No items found in this category.</p>
+                <% } %>
+                    </ul>
 </body>
+
+</html>
 
 </html>

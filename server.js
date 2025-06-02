@@ -63,9 +63,11 @@ app.get('/menu/:category', (req, res) => {
     return item.category === requestCat;
   });
 
+  // console.log(requestCat);
+
   res.render('category.ejs', {
     menuItems: menuItems,
-    category: requestedCategory
+    category: requestCat
   });
 });
 
