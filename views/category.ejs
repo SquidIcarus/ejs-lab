@@ -12,49 +12,49 @@
 </nav>
 
 <body>
-     <%- include('./partials/nav') %>
-   <h1>Categories</h1>
-    <ul>
-        <% menu.forEach(menu=> { %>
-            <% if (menu.category==='mains' ) { %>
-                <li>
-                    <%= menu.name %>,
-                        $<%= menu.price %>,
-                            <%= menu.rating %> ★'s,
-                                <%= menu.details %>
-                </li>
+    <%- include('./partials/nav') %>
+        <h1>Categories</h1>
+        <ul>
+            <% menu.forEach(menu=> { %>
+                <% if (menu.category==='mains' ) { %>
+                    <li>
+                        <%= menu.name %>,
+                            $<%= menu.price %>,
+                                <%= menu.rating %> ★'s,
+                                    <%= menu.details %>
+                    </li>
 
-                <% } %>
-                    <% }) %>
-    </ul>
-    <h2>Sides</h2>
-    <ul>
-        <% menu.forEach(menu=> { %>
-            <% if (menu.category==='sides' ) { %>
-                <li>
-                    <%= menu.name %>,
-                        $<%= menu.price %>,
-                            <%= menu.rating %> ★'s,
-                                <%= menu.details %>
-                </li>
+                    <% } %>
+                        <% }) %>
+        </ul>
+        <h2>Sides</h2>
+        <ul>
+            <% menu.forEach(menu=> { %>
+                <% if (menu.category==='sides' ) { %>
+                    <li>
+                        <%= menu.name %>,
+                            $<%= menu.price %>,
+                                <%= menu.rating %> ★'s,
+                                    <%= menu.details %>
+                    </li>
 
-                <% } %>
-                    <% }) %>
-    </ul>
-    <h2>Desserts</h2>
-    <ul>
-        <% menu.forEach(menu=> { %>
-            <% if (menu.category==='desserts' ) { %>
-                <li>
-                    <%= menu.name %>,
-                        $<%= menu.price %>,
-                            <%= menu.rating %> ★'s,
-                                <%= menu.details %>
-                </li>
+                    <% } %>
+                        <% }) %>
+        </ul>
+        <h2>Desserts</h2>
+        <ul>
+            <% menu.forEach(menu=> { %>
+                <% if (menu.category==='desserts' ) { %>
+                    <li>
+                        <%= menu.name %>,
+                            $<%= menu.price %>,
+                                <%= menu.rating %> ★'s,
+                                    <%= menu.details %>
+                    </li>
 
-                <% } %>
-                    <% }) %>
-    </ul>
+                    <% } %>
+                        <% }) %>
+        </ul>
 </body>
 
 </html>
